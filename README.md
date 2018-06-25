@@ -1,5 +1,6 @@
 # for_interview_Blog
-Part I
+### Part I
     a web application for practise.
-Part II
+
+### Part II
     Some basic kownledge.
