@@ -1,60 +1,53 @@
-15:37:59 INFO root: found model: User (table: users)
-15:37:59 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: email ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: passwd ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: admin ==> <BooleanField, boolean:None>
-15:37:59 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: image ==> <StringField, varchar(500):None>
-15:37:59 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:37:59 INFO root: found model: Blog (table: blogs)
-15:37:59 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
-15:37:59 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: summary ==> <StringField, varchar(200):None>
-15:37:59 INFO root:   found mapping: content ==> <TextField, text:None>
-15:37:59 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:37:59 INFO root: found model: Comment (table: comments)
-15:37:59 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: blog_id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
-15:37:59 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
-15:37:59 INFO root:   found mapping: content ==> <TextField, text:None>
-15:37:59 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:37:59 DEBUG asyncio: Using selector: SelectSelector
-15:37:59 INFO root: create database connection pool...
-15:37:59 INFO root: init jinja2...
-15:37:59 INFO root: set jinja2 template path: D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\templates
-15:37:59 INFO root: add route GET /api/blogs => api_blogs(page)
-15:37:59 INFO root: add route GET /api/comments => api_comments(page)
-15:37:59 INFO root: add route POST /api/blogs => api_create_blog(request, name, summary, content)
-15:37:59 INFO root: add route POST /api/blogs/{id}/comments => api_create_comment(id, request, content)
-15:37:59 INFO root: add route POST /api/blogs/{id}/delete => api_delete_blog(request, id)
-15:37:59 INFO root: add route POST /api/comments/{id}/delete => api_delete_comments(id, request)
-15:37:59 INFO root: add route GET /api/blogs/{id} => api_get_blog(id)
-15:37:59 INFO root: add route GET /api/users => api_get_users(page)
-15:37:59 INFO root: add route POST /api/users => api_register_user(email, name, passwd)
-15:37:59 INFO root: add route POST /api/blogs/{id} => api_update_blog(id, request, name, summary, content)
-15:37:59 INFO root: add route POST /api/authenticate => authenticate(email, passwd)
-15:37:59 INFO root: add route GET /blog/{id} => get_blog(id)
-15:37:59 INFO root: add route GET / => index(page)
-15:37:59 INFO root: add route GET /manage/ => manage()
-15:37:59 INFO root: add route GET /manage/blogs => manage_blogs(page)
-15:37:59 INFO root: add route GET /manage/comments => manage_comments(page)
-15:37:59 INFO root: add route GET /manage/blogs/create => manage_create_blog()
-15:37:59 INFO root: add route GET /manage/blogs/edit => manage_edit_blog(id)
-15:37:59 INFO root: add route GET /manage/users => manage_users(page)
-15:37:59 INFO root: add route GET /register => register()
-15:37:59 INFO root: add route GET /signin => signin()
-15:37:59 INFO root: add route GET /signout => signout(request)
-15:37:59 INFO root: add static /static/ => D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\static
-15:37:59 INFO root: server started at http://127.0.0.1:9000...
-15:38:04 INFO root: Request: GET /
-15:38:04 INFO root: check user: GET /
-15:38:04 INFO root: Response handler...
-15:38:04 INFO root: call with args: {}
-15:38:04 INFO root: SQL: select count(id) _num_ from `blogs`
-15:38:04 INFO root: rows returned: 1
-15:38:04 INFO aiohttp.access: 127.0.0.1 [21/Jul/2018:07:38:04 +0000] "GET / HTTP/1.1" 200 4706 "-" "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+15:49:25 INFO root: found model: User (table: users)
+15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: email ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: passwd ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: admin ==> <BooleanField, boolean:None>
+15:49:25 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: image ==> <StringField, varchar(500):None>
+15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+15:49:25 INFO root: found model: Blog (table: blogs)
+15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
+15:49:25 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: summary ==> <StringField, varchar(200):None>
+15:49:25 INFO root:   found mapping: content ==> <TextField, text:None>
+15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+15:49:25 INFO root: found model: Comment (table: comments)
+15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: blog_id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
+15:49:25 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
+15:49:25 INFO root:   found mapping: content ==> <TextField, text:None>
+15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+15:49:25 DEBUG asyncio: Using selector: SelectSelector
+15:49:25 INFO root: create database connection pool...
+15:49:25 INFO root: init jinja2...
+15:49:25 INFO root: set jinja2 template path: D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\templates
+15:49:25 INFO root: add route GET /api/blogs => api_blogs(page)
+15:49:25 INFO root: add route GET /api/comments => api_comments(page)
+15:49:25 INFO root: add route POST /api/blogs => api_create_blog(request, name, summary, content)
+15:49:25 INFO root: add route POST /api/blogs/{id}/comments => api_create_comment(id, request, content)
+15:49:25 INFO root: add route POST /api/blogs/{id}/delete => api_delete_blog(request, id)
+15:49:25 INFO root: add route POST /api/comments/{id}/delete => api_delete_comments(id, request)
+15:49:25 INFO root: add route GET /api/blogs/{id} => api_get_blog(id)
+15:49:25 INFO root: add route GET /api/users => api_get_users(page)
+15:49:25 INFO root: add route POST /api/users => api_register_user(email, name, passwd)
+15:49:25 INFO root: add route POST /api/blogs/{id} => api_update_blog(id, request, name, summary, content)
+15:49:25 INFO root: add route POST /api/authenticate => authenticate(email, passwd)
+15:49:25 INFO root: add route GET /blog/{id} => get_blog(id)
+15:49:25 INFO root: add route GET / => index(page)
+15:49:25 INFO root: add route GET /manage/ => manage()
+15:49:25 INFO root: add route GET /manage/blogs => manage_blogs(page)
+15:49:25 INFO root: add route GET /manage/comments => manage_comments(page)
+15:49:25 INFO root: add route GET /manage/blogs/create => manage_create_blog()
+15:49:25 INFO root: add route GET /manage/blogs/edit => manage_edit_blog(id)
+15:49:25 INFO root: add route GET /manage/users => manage_users(page)
+15:49:25 INFO root: add route GET /register => register()
+15:49:25 INFO root: add route GET /signin => signin()
+15:49:25 INFO root: add route GET /signout => signout(request)
+15:49:25 INFO root: add static /static/ => D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\static
+15:49:25 INFO root: server started at http://127.0.0.1:9000...
