@@ -1,10 +1,6 @@
 import logging
 import aiomysql
-from xx import StandardError
 
-# 不想看debug的信息输出，就注释这一行，换成下一行。
-logging.basicConfig(level=logging.DEBUG)
-# logging.basicConfig(level=logging.info)
 
 
 def log(sql, args=()):
@@ -24,8 +20,7 @@ async def create_pool(loop, **kw):
         autocommit=kw.get('autocommit', True),
         maxsize=kw.get('maxsize', 10),
         minsize=kw.get('minsize', 1),
-        loop=loop
-    )
+        loop=loop)
 
 
 async def destory_pool():
@@ -52,8 +47,8 @@ async def select(sql, args, size=None):
 
 async def execute(sql, args, autocommit=True):
     log(sql)
-    logging.debug("args is: ")
-    logging.debug(args)
+    # logging.debug("args is: ")
+    # logging.debug(args)
     async with __pool.get() as conn:
         if not autocommit:
             await conn.begin()
@@ -70,7 +65,7 @@ async def execute(sql, args, autocommit=True):
         return affected
 
 
-def created_args_string(num):
+def create_args_string(num):
     L = []
     for n in range(num):
         L.append('?')
@@ -78,7 +73,6 @@ def created_args_string(num):
 
 
 class Field(object):
-
     def __init__(self, name, column_type, primary_key, default):
         self.name = name
         self.column_type = column_type
@@ -86,13 +80,16 @@ class Field(object):
         self.default = default
 
     def __str__(self):
-        return '<%s, %s:%s>' % (self.__class__.__name__,
-                                self.column_type, self.name)
+        return '<%s, %s:%s>' % (self.__class__.__name__, self.column_type,
+                                self.name)
 
 
 class StringField(Field):
-    def __init__(self, name=None, primary_key=False,
-                 default=None, ddl='varchar(100)'):
+    def __init__(self,
+                 name=None,
+                 primary_key=False,
+                 default=None,
+                 ddl='varchar(100)'):
         super().__init__(name, ddl, primary_key, default)
 
 
@@ -121,51 +118,49 @@ class ModelMetaclass(type):
         if name == 'Model':
             return type.__new__(cls, name, bases, attrs)
         tableName = attrs.get('__table__', None) or name
-        logging.info('found model; %s (table: %s)' % (name, tableName))
+        logging.info('found model: %s (table: %s)' % (name, tableName))
         mappings = dict()
         fields = []
         primaryKey = None
         for k, v in attrs.items():
             if isinstance(v, Field):
-                logging.info('  found mappings: %s ==> %s' % (k, v))
+                logging.info('  found mapping: %s ==> %s' % (k, v))
                 mappings[k] = v
                 if v.primary_key:
+                    # 找到主键:
                     if primaryKey:
-                        raise StandardError(
-                            'Duplicate primary key for filed: %s' % k)
+                        raise Exception(
+                            'Duplicate primary key for field: %s' % k)
                     primaryKey = k
                 else:
                     fields.append(k)
         if not primaryKey:
-            raise StandardError('Primary key not found.')
+            raise Exception('Primary key not found.')
         for k in mappings.keys():
             attrs.pop(k)
         escaped_fields = list(map(lambda f: '`%s`' % f, fields))
         attrs['__mappings__'] = mappings
         attrs['__table__'] = tableName
-        attrs['__primary_key__'] = primaryKey
-        attrs['__fields__'] = fields
-        attrs['__select__'] = 'select `%s`, %s from `%s`' % \
-            (primaryKey, ','.join(escaped_fields), tableName)
-        attrs['__insert__'] = 'insert into `%s` (%s, `%s`) values (%s)' % \
-            (tableName,
-             ','.join(escaped_fields),
-             primaryKey,
-             created_args_string(len(escaped_fields) + 1))
-        attrs['__update__'] = 'update `%s` set %s where `%s`=?' % \
-            (tableName,
-             ','.join(map(lambda f: '`%s`=?' % (mappings.get(f).name or f),
-                          fields)),
-             primaryKey)
-        attrs['__delete__'] = 'delete from `%s` where `%s`=?' % (
-            tableName, primaryKey)
+        attrs['__primary_key__'] = primaryKey  # 主键属性名
+        attrs['__fields__'] = fields  # 除主键外的属性名
+        attrs['__select__'] = 'select `%s`, %s from `%s`' % (
+            primaryKey, ', '.join(escaped_fields), tableName)
+        attrs['__insert__'] = 'insert into `%s` (%s, `%s`) values (%s)' % (
+            tableName, ', '.join(escaped_fields), primaryKey,
+            create_args_string(len(escaped_fields) + 1))
+        attrs['__update__'] = 'update `%s` set %s where `%s`=?' % (
+            tableName, ', '.join(
+                map(lambda f: '`%s`=?' % (mappings.get(f).name or f), fields)),
+            primaryKey)
+        attrs['__delete__'] = 'delete from `%s` where `%s`=?' % (tableName,
+                                                                 primaryKey)
         return type.__new__(cls, name, bases, attrs)
 
 
 class Model(dict, metaclass=ModelMetaclass):
     def __init__(self, **kw):
         super(Model, self).__init__(**kw)
- 
+
     def __getattr__(self, key):
         try:
             return self[key]
@@ -187,8 +182,8 @@ class Model(dict, metaclass=ModelMetaclass):
                     value = field.default()
                 else:
                     value = field.default
-                logging.debug('using default value for %s: %s' %
-                              (key, str(value)))
+                logging.debug('using default value for %s: %s' % (key,
+                                                                  str(value)))
                 setattr(self, key, value)
         return value
 
@@ -234,8 +229,8 @@ class Model(dict, metaclass=ModelMetaclass):
     @classmethod
     async def find(cls, pk):
         ' find object by primary key. '
-        rs = await select(
-            '%s where `%s`=?' % (cls.__select__, cls.__primary_key__), [pk], 1)
+        rs = await select('%s where `%s`=?' %
+                               (cls.__select__, cls.__primary_key__), [pk], 1)
         if len(rs) == 0:
             return None
         return cls(**rs[0])

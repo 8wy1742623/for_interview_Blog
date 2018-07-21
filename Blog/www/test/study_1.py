@@ -1,35 +1,77 @@
-#-------------------------------------------------------------------------------
-# Name:        模块1
-# Purpose:
-#
-# Author:      admin
-#
-# Created:     12-07-2018
-# Copyright:   (c) admin 2018
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
+"""practise logging
+
+practise using logging in *.py.
+
+Variables:
+    if __name__ {[type]} -- [description]
+"""
+
+import logging
+import logging.config
+
+config = {
+    'disable_existing_loggers': False,
+    'version': 1,
+    'formatters': {
+        'short': {
+            'format': '%(asctime)s %(levelname)s %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'formatter': 'short',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'ERROR',
+        },
+        'plugins': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'progagate': False
+        },
+    },
+}
+
+logging.config.dictConfig(config)
 
 
-async def test(loop):
-    await orm.create_pool(loop=loop, user='www-data',
-                          password='www-data', db='awesome')
-    # 经测试能够执行，保存一条数据成功。
-    # u = User(name='test_name', email='test@test.com', admin=False, passwd='123',
-             # image='about:blank', id='110')
-    # await u.save()
-    
-    await orm.destory_pool()
+def do_magic(param):
+    pass
+
+
+def sample_function(secret_parameter):
+    logger = logging.getLogger(__name__)  # __name__=projectA.moduleB
+    logger.debug("Going to perform magic with '%s'", secret_parameter)
+    try:
+        result = do_magic(secret_parameter)
+        raise IndexError
+    except IndexError:
+        logger.exception("OMG it happened again, someone please tell Laszlo")
+    except Exception:
+        logger.info("Unexpected exception", exc_info=True)
+        raise
+    else:
+        logger.info(
+            "Magic with '%s' resulted in '%s'",
+            secret_parameter,
+            result,
+            stack_info=True)
+
 
 def main():
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(test(loop))
-    loop.close()
+    """[summary]
+
+    [description]
+    """
+    sample_function("hello")
 
 
 if __name__ == '__main__':
-    import sys
-    sys.path.append("../")
-    import orm
-    from models import User, Blog, Comment
-    import asyncio
+    # import sys
+    # sys.path.append("../")
     main()

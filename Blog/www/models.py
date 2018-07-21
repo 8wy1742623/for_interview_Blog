@@ -7,7 +7,8 @@ Models for user, blog, comment.
 
 __author__ = 'Michael Liao'
 
-import time, uuid
+import time
+import uuid
 
 from orm import Model, StringField, BooleanField, FloatField, TextField
 
