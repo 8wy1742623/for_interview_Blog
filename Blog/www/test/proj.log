@@ -1,53 +1,53 @@
-15:49:25 INFO root: found model: User (table: users)
-15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: email ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: passwd ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: admin ==> <BooleanField, boolean:None>
-15:49:25 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: image ==> <StringField, varchar(500):None>
-15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:49:25 INFO root: found model: Blog (table: blogs)
-15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
-15:49:25 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: summary ==> <StringField, varchar(200):None>
-15:49:25 INFO root:   found mapping: content ==> <TextField, text:None>
-15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:49:25 INFO root: found model: Comment (table: comments)
-15:49:25 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: blog_id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
-15:49:25 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
-15:49:25 INFO root:   found mapping: content ==> <TextField, text:None>
-15:49:25 INFO root:   found mapping: created_at ==> <FloatField, real:None>
-15:49:25 DEBUG asyncio: Using selector: SelectSelector
-15:49:25 INFO root: create database connection pool...
-15:49:25 INFO root: init jinja2...
-15:49:25 INFO root: set jinja2 template path: D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\templates
-15:49:25 INFO root: add route GET /api/blogs => api_blogs(page)
-15:49:25 INFO root: add route GET /api/comments => api_comments(page)
-15:49:25 INFO root: add route POST /api/blogs => api_create_blog(request, name, summary, content)
-15:49:25 INFO root: add route POST /api/blogs/{id}/comments => api_create_comment(id, request, content)
-15:49:25 INFO root: add route POST /api/blogs/{id}/delete => api_delete_blog(request, id)
-15:49:25 INFO root: add route POST /api/comments/{id}/delete => api_delete_comments(id, request)
-15:49:25 INFO root: add route GET /api/blogs/{id} => api_get_blog(id)
-15:49:25 INFO root: add route GET /api/users => api_get_users(page)
-15:49:25 INFO root: add route POST /api/users => api_register_user(email, name, passwd)
-15:49:25 INFO root: add route POST /api/blogs/{id} => api_update_blog(id, request, name, summary, content)
-15:49:25 INFO root: add route POST /api/authenticate => authenticate(email, passwd)
-15:49:25 INFO root: add route GET /blog/{id} => get_blog(id)
-15:49:25 INFO root: add route GET / => index(page)
-15:49:25 INFO root: add route GET /manage/ => manage()
-15:49:25 INFO root: add route GET /manage/blogs => manage_blogs(page)
-15:49:25 INFO root: add route GET /manage/comments => manage_comments(page)
-15:49:25 INFO root: add route GET /manage/blogs/create => manage_create_blog()
-15:49:25 INFO root: add route GET /manage/blogs/edit => manage_edit_blog(id)
-15:49:25 INFO root: add route GET /manage/users => manage_users(page)
-15:49:25 INFO root: add route GET /register => register()
-15:49:25 INFO root: add route GET /signin => signin()
-15:49:25 INFO root: add route GET /signout => signout(request)
-15:49:25 INFO root: add static /static/ => D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\static
-15:49:25 INFO root: server started at http://127.0.0.1:9000...
+17:04:15 INFO root: found model: User (table: users)
+17:04:15 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: email ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: passwd ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: admin ==> <BooleanField, boolean:None>
+17:04:15 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: image ==> <StringField, varchar(500):None>
+17:04:15 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+17:04:15 INFO root: found model: Blog (table: blogs)
+17:04:15 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
+17:04:15 INFO root:   found mapping: name ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: summary ==> <StringField, varchar(200):None>
+17:04:15 INFO root:   found mapping: content ==> <TextField, text:None>
+17:04:15 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+17:04:15 INFO root: found model: Comment (table: comments)
+17:04:15 INFO root:   found mapping: id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: blog_id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_id ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_name ==> <StringField, varchar(50):None>
+17:04:15 INFO root:   found mapping: user_image ==> <StringField, varchar(500):None>
+17:04:15 INFO root:   found mapping: content ==> <TextField, text:None>
+17:04:15 INFO root:   found mapping: created_at ==> <FloatField, real:None>
+17:04:15 DEBUG asyncio: Using selector: SelectSelector
+17:04:15 INFO root: create database connection pool...
+17:04:15 INFO root: init jinja2...
+17:04:15 INFO root: set jinja2 template path: D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\templates
+17:04:15 INFO root: add route GET /api/blogs => api_blogs(page)
+17:04:15 INFO root: add route GET /api/comments => api_comments(page)
+17:04:15 INFO root: add route POST /api/blogs => api_create_blog(request, name, summary, content)
+17:04:15 INFO root: add route POST /api/blogs/{id}/comments => api_create_comment(id, request, content)
+17:04:15 INFO root: add route POST /api/blogs/{id}/delete => api_delete_blog(request, id)
+17:04:15 INFO root: add route POST /api/comments/{id}/delete => api_delete_comments(id, request)
+17:04:15 INFO root: add route GET /api/blogs/{id} => api_get_blog(id)
+17:04:15 INFO root: add route GET /api/users => api_get_users(page)
+17:04:15 INFO root: add route POST /api/users => api_register_user(email, name, passwd)
+17:04:15 INFO root: add route POST /api/blogs/{id} => api_update_blog(id, request, name, summary, content)
+17:04:15 INFO root: add route POST /api/authenticate => authenticate(email, passwd)
+17:04:15 INFO root: add route GET /blog/{id} => get_blog(id)
+17:04:15 INFO root: add route GET / => index(page)
+17:04:15 INFO root: add route GET /manage/ => manage()
+17:04:15 INFO root: add route GET /manage/blogs => manage_blogs(page)
+17:04:15 INFO root: add route GET /manage/comments => manage_comments(page)
+17:04:15 INFO root: add route GET /manage/blogs/create => manage_create_blog()
+17:04:15 INFO root: add route GET /manage/blogs/edit => manage_edit_blog(id)
+17:04:15 INFO root: add route GET /manage/users => manage_users(page)
+17:04:15 INFO root: add route GET /register => register()
+17:04:15 INFO root: add route GET /signin => signin()
+17:04:15 INFO root: add route GET /signout => signout(request)
+17:04:15 INFO root: add static /static/ => D:\ch_download\skill_doc\data\dailyRecord\2018\for_interview\for_interview_Blog\Blog\www\static
+17:04:15 INFO root: server started at http://127.0.0.1:9000...
