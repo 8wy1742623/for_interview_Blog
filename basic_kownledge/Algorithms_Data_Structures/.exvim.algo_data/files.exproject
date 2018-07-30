@@ -1,0 +1,11 @@
+" Press <F1> for help
+
+-[F]Algorithms_Data_Structures {
+ |-[F]chap_1 {
+ | |-exercises_1_17.py
+ | |-test_6.py }
+ |
+ |-algo_data.exvim
+ |-readme.md }
+
+

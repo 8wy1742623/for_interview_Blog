@@ -2,3 +2,5 @@
 .tags
 .tags*
 __pycache__
+./todo_list/
+./Read_Later/

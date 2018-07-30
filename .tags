@@ -6,58 +6,147 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 APIError	.\Blog\www\apis.py	/^class APIError(Exception):$/;"	c
 APIError	.\Blog\www\coroweb.py	/^from apis import APIError$/;"	i
+APIError	.\Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
 APIPermissionError	.\Blog\www\apis.py	/^class APIPermissionError(APIError):$/;"	c
 APIResourceNotFoundError	.\Blog\www\apis.py	/^class APIResourceNotFoundError(APIError):$/;"	c
+APIResourceNotFoundError	.\Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
 APIValueError	.\Blog\www\apis.py	/^class APIValueError(APIError):$/;"	c
+APIValueError	.\Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
+AndGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class AndGate(BinaryGate):$/;"	c
+BinaryGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class BinaryGate(LogicGate):$/;"	c
 Blog	.\Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 Blog	.\Blog\www\models.py	/^class Blog(Model):$/;"	c
 BooleanField	.\Blog\www\models.py	/^from orm import Model, StringField, BooleanField, FloatField, TextField$/;"	i
 BooleanField	.\Blog\www\orm.py	/^class BooleanField(Field):$/;"	c
+COOKIE_NAME	.\Blog\www\app.py	/^from handlers import cookie2user, COOKIE_NAME$/;"	i
+COOKIE_NAME	.\Blog\www\handlers.py	/^COOKIE_NAME = 'awesession'$/;"	v
+CTAGS_CMD	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set CTAGS_CMD=ctags$/;"	v
+CTAGS_CMD	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set CTAGS_CMD=ctags$/;"	v
+Circuit	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Circuit(LogicGate):$/;"	c
 Comment	.\Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 Comment	.\Blog\www\models.py	/^class Comment(Model):$/;"	c
+Connector	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Connector:$/;"	c
 DEBUG	.\Blog\www\markdown2.py	/^DEBUG = False$/;"	v
 DEFAULT_TAB_WIDTH	.\Blog\www\markdown2.py	/^DEFAULT_TAB_WIDTH = 4$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+DEST	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
 Dict	.\Blog\www\config.py	/^class Dict(dict):$/;"	c
+EXCLUDE_FOLDERS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set EXCLUDE_FOLDERS=$/;"	v
+EXCLUDE_FOLDERS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set EXCLUDE_FOLDERS=__pycache__ $/;"	v
 Environment	.\Blog\www\app.py	/^from jinja2 import Environment, FileSystemLoader$/;"	i
+FILE_FILTER_PATTERN	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FILE_FILTER_PATTERN=""$/;"	v
+FILE_FILTER_PATTERN	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FILE_FILTER_PATTERN=""$/;"	v
+FILE_SUFFIXS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FILE_SUFFIXS=$/;"	v
+FILE_SUFFIXS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FILE_SUFFIXS=$/;"	v
+FOLDER_FILTER_PATTERN	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FOLDER_FILTER_PATTERN=".*\\\\\\\\__pycache__\\\\\\\\.*"$/;"	v
+FOLDER_FILTER_PATTERN	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FOLDER_FILTER_PATTERN=".*\\\\\\\\__pycache__\\\\\\\\.*"$/;"	v
 Field	.\Blog\www\orm.py	/^class Field(object):$/;"	c
+FileSystemEventHandler	.\Blog\www\pymonitor.py	/^from watchdog.events import FileSystemEventHandler$/;"	i
 FileSystemLoader	.\Blog\www\app.py	/^from jinja2 import Environment, FileSystemLoader$/;"	i
 FloatField	.\Blog\www\models.py	/^from orm import Model, StringField, BooleanField, FloatField, TextField$/;"	i
 FloatField	.\Blog\www\orm.py	/^class FloatField(Field):$/;"	c
+Fraction	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Fraction():$/;"	c
+Full_adder	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Full_adder(Circuit):$/;"	c
+Full_adder_8_bit	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Full_adder_8_bit(Full_adder):$/;"	c
+GAWK_SUFFIX	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set GAWK_SUFFIX=exc$/;"	v
+GAWK_SUFFIX	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set GAWK_SUFFIX=exc$/;"	v
+Half_adder	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Half_adder(Circuit):$/;"	c
 HtmlCodeFormatter	.\Blog\www\markdown2.py	/^        class HtmlCodeFormatter(pygments.formatters.HtmlFormatter):$/;"	c	function:Markdown._color_with_pygments
+ID_TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set ID_TARGET="%DEST%\\idutils-files"$/;"	v
+ID_TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set ID_TARGET="%DEST%\\idutils-files"$/;"	v
 IntegerField	.\Blog\www\orm.py	/^class IntegerField(Field):$/;"	c
+LogicGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class LogicGate():$/;"	c
 Markdown	.\Blog\www\markdown2.py	/^class Markdown(object):$/;"	c
 MarkdownError	.\Blog\www\markdown2.py	/^class MarkdownError(Exception):$/;"	c
 MarkdownWithExtras	.\Blog\www\markdown2.py	/^class MarkdownWithExtras(Markdown):$/;"	c
 Model	.\Blog\www\models.py	/^from orm import Model, StringField, BooleanField, FloatField, TextField$/;"	i
 Model	.\Blog\www\orm.py	/^class Model(dict, metaclass=ModelMetaclass):$/;"	c
 ModelMetaclass	.\Blog\www\orm.py	/^class ModelMetaclass(type):$/;"	c
+MyFileSystemEventHandler	.\Blog\www\pymonitor.py	/^class MyFileSystemEventHandler(FileSystemEventHandler):$/;"	c
+NandGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NandGate(BinaryGate):$/;"	c
+NorGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NorGate(BinaryGate):$/;"	c
+NotGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NotGate(UnaryGate):$/;"	c
 Number	.\Blog\www\static\js\awesome.js	/^    Number.prototype.toDateTime = function(format) {$/;"	c
 Number.toDateTime	.\Blog\www\static\js\awesome.js	/^    Number.prototype.toDateTime = function(format) {$/;"	m
+OPTIONS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set OPTIONS=--fields=+iaS --extra=+q$/;"	v
+OPTIONS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set OPTIONS=--fields=+iaS --extra=+q$/;"	v
+Observer	.\Blog\www\pymonitor.py	/^from watchdog.observers import Observer$/;"	i
+OrGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class OrGate(BinaryGate):$/;"	c
 PIPE	.\Blog\www\markdown2.py	/^            from subprocess import Popen, PIPE$/;"	i
+Page	.\Blog\www\apis.py	/^class Page(object):$/;"	c
 Popen	.\Blog\www\markdown2.py	/^            from subprocess import Popen, PIPE$/;"	i
 RequestHandler	.\Blog\www\coroweb.py	/^class RequestHandler(object):$/;"	c
 SECRET_SALT	.\Blog\www\markdown2.py	/^SECRET_SALT = bytes(randint(0, 1000000))$/;"	v
-StandardError	.\Blog\www\orm.py	/^from xx import StandardError$/;"	i
-StandardError	.\Blog\www\xx.py	/^class StandardError(Exception):$/;"	c
 String	.\Blog\www\static\js\awesome.js	/^    String.prototype.trim = function() {$/;"	c
 String.trim	.\Blog\www\static\js\awesome.js	/^    String.prototype.trim = function() {$/;"	m
 StringField	.\Blog\www\models.py	/^from orm import Model, StringField, BooleanField, FloatField, TextField$/;"	i
 StringField	.\Blog\www\orm.py	/^class StringField(Field):$/;"	c
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TARGET=%DEST%\\files$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TARGET=%DEST%\\ID$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TARGET=%DEST%\\inherits$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TARGET=%DEST%\\symbols$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TARGET=%DEST%\\tags$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TARGET=%DEST%\\files$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TARGET=%DEST%\\ID$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TARGET=%DEST%\\inherits$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TARGET=%DEST%\\symbols$/;"	v
+TARGET	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TARGET=%DEST%\\tags$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TMP=%DEST%\\_files_gawk$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TMP=%DEST%\\_ID$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TMP=%DEST%\\_inherits$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TMP=%DEST%\\_symbols$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TMP=%DEST%\\_tags$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TMP=%DEST%\\_files_gawk$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TMP=%DEST%\\_ID$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TMP=%DEST%\\_inherits$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TMP=%DEST%\\_symbols$/;"	v
+TMP	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TMP=%DEST%\\_tags$/;"	v
+TMP2	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TMP2=%DEST%\\_files$/;"	v
+TMP2	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TMP2=%DEST%\\_files$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+TOOLS	.\basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
 TextField	.\Blog\www\models.py	/^from orm import Model, StringField, BooleanField, FloatField, TextField$/;"	i
 TextField	.\Blog\www\orm.py	/^class TextField(Field):$/;"	c
+UnaryGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class UnaryGate(LogicGate):$/;"	c
 UnicodeWithAttrs	.\Blog\www\markdown2.py	/^class UnicodeWithAttrs(unicode):$/;"	c
 User	.\Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 User	.\Blog\www\models.py	/^class User(Model):$/;"	c
+XorGate	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class XorGate(BinaryGate):$/;"	c
+_COOKIE_KEY	.\Blog\www\handlers.py	/^_COOKIE_KEY = configs.session.secret  # 'awesome'$/;"	v
 _NoReflowFormatter	.\Blog\www\markdown2.py	/^class _NoReflowFormatter(optparse.IndentedHelpFormatter):$/;"	c
+_RE_EMAIL	.\Blog\www\handlers.py	/^_RE_EMAIL = re.compile($/;"	v
+_RE_SHA1	.\Blog\www\handlers.py	/^_RE_SHA1 = re.compile(r'^[0-9a-f]{40}$')$/;"	v
+__add__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __add__(self, otherfraction):$/;"	m	class:Fraction	file:
 __author__	.\Blog\www\markdown2.py	/^__author__ = "Trent Mick"$/;"	v
 __author__	.\Blog\www\models.py	/^__author__ = 'Michael Liao'$/;"	v
 __call__	.\Blog\www\coroweb.py	/^    async def __call__(self, request):$/;"	m	class:RequestHandler	file:
 __call__	.\Blog\www\markdown2.py	/^   def __call__(self, *args):$/;"	m	class:_memoized	file:
+__eq__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __eq__(self, other):$/;"	m	class:Fraction	file:
+__ge__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __ge__(self, other):$/;"	m	class:Fraction	file:
 __getattr__	.\Blog\www\config.py	/^    def __getattr__(self, key):$/;"	m	class:Dict	file:
 __getattr__	.\Blog\www\orm.py	/^    def __getattr__(self, key):$/;"	m	class:Model	file:
+__gt__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __gt__(self, other):$/;"	m	class:Fraction	file:
+__iadd__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __iadd__(self, otherfraction):$/;"	m	class:Fraction	file:
 __init__	.\Blog\www\apis.py	/^    def __init__(self, error, data='', message=''):$/;"	m	class:APIError
 __init__	.\Blog\www\apis.py	/^    def __init__(self, field, message=''):$/;"	m	class:APIResourceNotFoundError
 __init__	.\Blog\www\apis.py	/^    def __init__(self, field, message=''):$/;"	m	class:APIValueError
+__init__	.\Blog\www\apis.py	/^    def __init__(self, item_count, page_index=1, page_size=10):$/;"	m	class:Page
 __init__	.\Blog\www\apis.py	/^    def __init__(self, message=''):$/;"	m	class:APIPermissionError
 __init__	.\Blog\www\config.py	/^    def __init__(self, names=(), values=(), **kw):$/;"	m	class:Dict
 __init__	.\Blog\www\coroweb.py	/^    def __init__(self, app, fn):$/;"	m	class:RequestHandler
@@ -70,14 +159,40 @@ __init__	.\Blog\www\orm.py	/^    def __init__(self, name=None, default=None):$/;
 __init__	.\Blog\www\orm.py	/^    def __init__(self, name=None, primary_key=False, default=0):$/;"	m	class:IntegerField
 __init__	.\Blog\www\orm.py	/^    def __init__(self, name=None, primary_key=False, default=0.0):$/;"	m	class:FloatField
 __init__	.\Blog\www\orm.py	/^    def __init__(self,$/;"	m	class:StringField
+__init__	.\Blog\www\pymonitor.py	/^    def __init__(self, fn):$/;"	m	class:MyFileSystemEventHandler
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, fgate, tgate):$/;"	m	class:Connector
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:AndGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:BinaryGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Circuit
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Full_adder
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Full_adder_8_bit
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Half_adder
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:LogicGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NandGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NorGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NotGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:OrGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:UnaryGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:XorGate
+__init__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, top, bottom):$/;"	m	class:Fraction
+__le__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __le__(self, other):$/;"	m	class:Fraction	file:
+__lt__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __lt__(self, other):$/;"	m	class:Fraction	file:
+__mul__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __mul__(self, otherfraction):$/;"	m	class:Fraction	file:
 __new__	.\Blog\www\orm.py	/^    def __new__(cls, name, bases, attrs):$/;"	m	class:ModelMetaclass	file:
+__radd__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __radd__(self, otherfraction):$/;"	m	class:Fraction	file:
+__repr__	.\Blog\www\apis.py	/^    __repr__ = __str__$/;"	v	class:Page
 __repr__	.\Blog\www\markdown2.py	/^   def __repr__(self):$/;"	m	class:_memoized	file:
+__repr__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    __repr__ = __str__$/;"	v	class:Fraction
 __setattr__	.\Blog\www\config.py	/^    def __setattr__(self, key, value):$/;"	m	class:Dict	file:
 __setattr__	.\Blog\www\orm.py	/^    def __setattr__(self, key, value):$/;"	m	class:Model	file:
+__str__	.\Blog\www\apis.py	/^    def __str__(self):$/;"	m	class:Page	file:
 __str__	.\Blog\www\orm.py	/^    def __str__(self):$/;"	m	class:Field	file:
+__str__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __str__(self):$/;"	m	class:Fraction	file:
+__sub__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __sub__(self, otherfraction):$/;"	m	class:Fraction	file:
 __table__	.\Blog\www\models.py	/^    __table__ = 'blogs'$/;"	v	class:Blog
 __table__	.\Blog\www\models.py	/^    __table__ = 'comments'$/;"	v	class:Comment
 __table__	.\Blog\www\models.py	/^    __table__ = 'users'$/;"	v	class:User
+__truediv__	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __truediv__(self, otherfraction):$/;"	m	class:Fraction	file:
 __version__	.\Blog\www\markdown2.py	/^__version__ = '.'.join(map(str, __version_info__))$/;"	v
 __version_info__	.\Blog\www\markdown2.py	/^__version_info__ = (2, 3, 0)$/;"	v
 _a_nofollow	.\Blog\www\markdown2.py	/^    _a_nofollow = re.compile(r"<(a)([^>]*href=)", re.IGNORECASE)$/;"	v	class:Markdown
@@ -201,10 +316,24 @@ add_static	.\Blog\www\app.py	/^from coroweb import add_routes, add_static$/;"	i
 add_static	.\Blog\www\coroweb.py	/^def add_static(app):$/;"	f
 admin	.\Blog\www\models.py	/^    admin = BooleanField()$/;"	v	class:User
 aiomysql	.\Blog\www\orm.py	/^import aiomysql$/;"	i
+api_blogs	.\Blog\www\handlers.py	/^async def api_blogs(*, page='1'):$/;"	f
+api_comments	.\Blog\www\handlers.py	/^async def api_comments(*, page='1'):$/;"	f
+api_create_blog	.\Blog\www\handlers.py	/^async def api_create_blog(request, *, name, summary, content):$/;"	f
+api_create_comment	.\Blog\www\handlers.py	/^async def api_create_comment(id, request, *, content):$/;"	f
+api_delete_blog	.\Blog\www\handlers.py	/^async def api_delete_blog(request, *, id):$/;"	f
+api_delete_comments	.\Blog\www\handlers.py	/^async def api_delete_comments(id, request):$/;"	f
+api_get_blog	.\Blog\www\handlers.py	/^async def api_get_blog(*, id):$/;"	f
+api_get_users	.\Blog\www\handlers.py	/^async def api_get_users(*, page='1'):$/;"	f
+api_register_user	.\Blog\www\handlers.py	/^async def api_register_user(*, email, name, passwd):$/;"	f
+api_update_blog	.\Blog\www\handlers.py	/^async def api_update_blog(id, request, *, name, summary, content):$/;"	f
+argv	.\Blog\www\pymonitor.py	/^    argv = sys.argv[1:]$/;"	v
 asyncio	.\Blog\www\app.py	/^import asyncio$/;"	i
 asyncio	.\Blog\www\coroweb.py	/^import asyncio$/;"	i
-asyncio	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
-base64	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+asyncio	.\Blog\www\handlers.py	/^import asyncio$/;"	i
+auth	.\Blog\www\app.py	/^    async def auth(request):$/;"	f	function:auth_factory
+auth_factory	.\Blog\www\app.py	/^async def auth_factory(app, handler):$/;"	f
+authenticate	.\Blog\www\handlers.py	/^async def authenticate(*, email, passwd):$/;"	f
+base64	.\Blog\www\handlers.py	/^import base64$/;"	i
 base_string_type	.\Blog\www\markdown2.py	/^    base_string_type = basestring$/;"	v
 base_string_type	.\Blog\www\markdown2.py	/^    base_string_type = str$/;"	v
 blog_id	.\Blog\www\models.py	/^    blog_id = StringField(ddl='varchar(50)')$/;"	v	class:Comment
@@ -212,9 +341,13 @@ blogs	.\Blog\conf\schema.sql	/^create table blogs ($/;"	t
 blogs.key	.\Blog\conf\schema.sql	/^    key `idx_created_at` (`created_at`),$/;"	F
 bottom	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
 c.init	.\Blog\www\static\js\sha1.min.js	/^var CryptoJS=CryptoJS||function(e,m){var p={},j=p.lib={},l=function(){},f=j.Base={extend:function(a){l.prototype=this;var c=new l;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},$/;"	c
+card	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^class card():$/;"	c
+check_admin	.\Blog\www\handlers.py	/^def check_admin(request):$/;"	f
 clsactive	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
 clswrapper	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
 codecs	.\Blog\www\markdown2.py	/^import codecs$/;"	i
+command	.\Blog\www\pymonitor.py	/^    command = argv$/;"	v
+command	.\Blog\www\pymonitor.py	/^command = ['echo', 'ok']$/;"	v
 comments	.\Blog\conf\schema.sql	/^create table comments ($/;"	t
 comments.key	.\Blog\conf\schema.sql	/^    key `idx_created_at` (`created_at`),$/;"	F
 config	.\Blog\www\test\my_log.py	/^import logging.config$/;"	i
@@ -222,28 +355,36 @@ config	.\Blog\www\test\study_1.py	/^config = {$/;"	v
 config	.\Blog\www\test\study_1.py	/^import logging.config$/;"	i
 config_default	.\Blog\www\config.py	/^import config_default$/;"	i
 config_override	.\Blog\www\config.py	/^    import config_override$/;"	i
+configs	.\Blog\www\app.py	/^from config import configs$/;"	i
 configs	.\Blog\www\config.py	/^    configs = merge(configs, config_override.configs)$/;"	v
 configs	.\Blog\www\config.py	/^configs = config_default.configs$/;"	v
 configs	.\Blog\www\config.py	/^configs = toDict(configs)$/;"	v
 configs	.\Blog\www\config_default.py	/^configs = {$/;"	v
 configs	.\Blog\www\config_override.py	/^configs = {$/;"	v
+configs	.\Blog\www\handlers.py	/^from config import configs$/;"	i
 content	.\Blog\www\models.py	/^    content = TextField()$/;"	v	class:Blog
 content	.\Blog\www\models.py	/^    content = TextField()$/;"	v	class:Comment
 convert	.\Blog\www\markdown2.py	/^    def convert(self, text):$/;"	m	class:Markdown
+cookie2user	.\Blog\www\app.py	/^from handlers import cookie2user, COOKIE_NAME$/;"	i
+cookie2user	.\Blog\www\handlers.py	/^async def cookie2user(cookie_str):$/;"	f
+create_args_string	.\Blog\www\orm.py	/^def create_args_string(num):$/;"	f
 create_pool	.\Blog\www\orm.py	/^async def create_pool(loop, **kw):$/;"	f
-created_args_string	.\Blog\www\orm.py	/^def created_args_string(num):$/;"	f
 created_at	.\Blog\www\models.py	/^    created_at = FloatField(default=time.time)$/;"	v	class:Blog
 created_at	.\Blog\www\models.py	/^    created_at = FloatField(default=time.time)$/;"	v	class:Comment
 created_at	.\Blog\www\models.py	/^    created_at = FloatField(default=time.time)$/;"	v	class:User
 data_factory	.\Blog\www\app.py	/^async def data_factory(app, handler):$/;"	f
 datetime	.\Blog\www\app.py	/^from datetime import datetime$/;"	i
 datetime_filter	.\Blog\www\app.py	/^def datetime_filter(t):$/;"	f
+deck_cards	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^class deck_cards():$/;"	c
+deck_dict	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    deck_dict = {$/;"	v	class:deck_cards
 decorator	.\Blog\www\coroweb.py	/^    def decorator(func):$/;"	f	function:get
 decorator	.\Blog\www\coroweb.py	/^    def decorator(func):$/;"	f	function:post
 destory_pool	.\Blog\www\orm.py	/^async def destory_pool():$/;"	f
 dirname	.\Blog\www\markdown2.py	/^    from os.path import join, dirname, abspath, exists$/;"	i
 do_magic	.\Blog\www\test\study_1.py	/^def do_magic(param):$/;"	f
+doctest	.\Blog\www\apis.py	/^    import doctest$/;"	i
 doctest	.\Blog\www\markdown2.py	/^    import doctest$/;"	i
+doctest	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    import doctest$/;"	i
 email	.\Blog\www\models.py	/^    email = StringField(ddl='varchar(50)')$/;"	v	class:User
 execute	.\Blog\www\orm.py	/^async def execute(sql, args, autocommit=True):$/;"	f
 exists	.\Blog\www\markdown2.py	/^    from os.path import join, dirname, abspath, exists$/;"	i
@@ -259,19 +400,38 @@ fpath	.\basic_kownledge\IO_coding\prac.py	/^fpath = r'test.txt'$/;"	v
 functools	.\Blog\www\apis.py	/^import functools$/;"	i
 functools	.\Blog\www\coroweb.py	/^import functools$/;"	i
 g_escape_table	.\Blog\www\markdown2.py	/^g_escape_table = dict([(ch, _hash_text(ch))$/;"	v
+gcd	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^def gcd(m, n):$/;"	f
 generators	.\Blog\www\markdown2.py	/^from __future__ import generators$/;"	i
 get	.\Blog\www\coroweb.py	/^def get(path):$/;"	f
 get	.\Blog\www\handlers.py	/^from coroweb import get, post$/;"	i
+getDen	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getDen(self):$/;"	m	class:Fraction
+getFrom	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getFrom(self):$/;"	m	class:Connector
+getName	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getName(self):$/;"	m	class:LogicGate
+getNum	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getNum(self):$/;"	m	class:Fraction
+getOutput	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getOutput(self):$/;"	m	class:LogicGate
+getPin	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPin(self):$/;"	m	class:UnaryGate
+getPinA	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:BinaryGate
+getPinA	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Full_adder
+getPinA	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Full_adder_8_bit
+getPinA	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Half_adder
+getPinB	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:BinaryGate
+getPinB	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Full_adder
+getPinB	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Full_adder_8_bit
+getPinB	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Half_adder
+getPinC_1	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinC_1(self):$/;"	m	class:Full_adder
+getTo	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getTo(self):$/;"	m	class:Connector
 getValue	.\Blog\www\orm.py	/^    def getValue(self, key):$/;"	m	class:Model
 getValueOrDefault	.\Blog\www\orm.py	/^    def getValueOrDefault(self, key):$/;"	m	class:Model
 getWidthFrom	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
+get_blog	.\Blog\www\handlers.py	/^async def get_blog(id):$/;"	f
 get_named_kw_args	.\Blog\www\coroweb.py	/^def get_named_kw_args(fn):$/;"	f
+get_page_index	.\Blog\www\handlers.py	/^def get_page_index(page_str):$/;"	f
 get_required_kw_args	.\Blog\www\coroweb.py	/^def get_required_kw_args(fn):$/;"	f
 handlers	.\Blog\www\test\my_log.py	/^import logging.handlers$/;"	i
 has_named_kw_args	.\Blog\www\coroweb.py	/^def has_named_kw_args(fn):$/;"	f
 has_request_arg	.\Blog\www\coroweb.py	/^def has_request_arg(fn):$/;"	f
 has_var_kw_arg	.\Blog\www\coroweb.py	/^def has_var_kw_arg(fn):$/;"	f
-hashlib	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+hashlib	.\Blog\www\handlers.py	/^import hashlib$/;"	i
 header_id_from_text	.\Blog\www\markdown2.py	/^    def header_id_from_text(self, text, prefix, n):$/;"	m	class:Markdown
 html_blocks	.\Blog\www\markdown2.py	/^    html_blocks = None$/;"	v	class:Markdown
 html_removed_text	.\Blog\www\markdown2.py	/^    html_removed_text = "[HTML_REMOVED]"  # for compat with markdown.py$/;"	v	class:Markdown
@@ -281,11 +441,15 @@ id	.\Blog\www\models.py	/^    id = StringField(primary_key=True, default=next_id
 id	.\Blog\www\models.py	/^    id = StringField(primary_key=True, default=next_id, ddl='varchar(50)')$/;"	v	class:User
 image	.\Blog\www\models.py	/^    image = StringField(ddl='varchar(500)')$/;"	v	class:User
 indent	.\Blog\www\markdown2.py	/^        def indent():$/;"	f	function:UnicodeWithAttrs.toc_html
-index	.\Blog\www\handlers.py	/^async def index(request):$/;"	f
+index	.\Blog\www\handlers.py	/^async def index(*, page='1'):$/;"	f
 init	.\Blog\www\app.py	/^async def init(loop):$/;"	f
 init	.\Blog\www\static\js\sha1.min.js	/^var CryptoJS=CryptoJS||function(e,m){var p={},j=p.lib={},l=function(){},f=j.Base={extend:function(a){l.prototype=this;var c=new l;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},$/;"	c
 init	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	m
 init.extend	.\Blog\www\static\js\sha1.min.js	/^var CryptoJS=CryptoJS||function(e,m){var p={},j=p.lib={},l=function(){},f=j.Base={extend:function(a){l.prototype=this;var c=new l;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},$/;"	m
+initVM	.\Blog\www\templates\manage_blog_edit.html	/^function initVM(blog) {$/;"	f
+initVM	.\Blog\www\templates\manage_blogs.html	/^function initVM(data) {$/;"	f
+initVM	.\Blog\www\templates\manage_comments.html	/^function initVM(data) {$/;"	f
+initVM	.\Blog\www\templates\manage_users.html	/^function initVM(data) {$/;"	f
 init_jinja2	.\Blog\www\app.py	/^def init_jinja2(app, **kw):$/;"	f
 init_logging	.\Blog\www\test\my_log.py	/^def init_logging(log_file_name):$/;"	f
 inspect	.\Blog\www\apis.py	/^import inspect$/;"	i
@@ -293,11 +457,13 @@ inspect	.\Blog\www\coroweb.py	/^import inspect$/;"	i
 join	.\Blog\www\markdown2.py	/^    from os.path import join, dirname, abspath, exists$/;"	i
 json	.\Blog\www\apis.py	/^import json$/;"	i
 json	.\Blog\www\app.py	/^import json$/;"	i
-json	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+json	.\Blog\www\handlers.py	/^import json$/;"	i
+kill_process	.\Blog\www\pymonitor.py	/^def kill_process():$/;"	f
 lexers	.\Blog\www\markdown2.py	/^            from pygments import lexers, util$/;"	i
 list_level	.\Blog\www\markdown2.py	/^    list_level = 0$/;"	v	class:Markdown
 log	.\Blog\www\markdown2.py	/^log = logging.getLogger("markdown")$/;"	v
 log	.\Blog\www\orm.py	/^def log(sql, args=()):$/;"	f
+log_print	.\Blog\www\pymonitor.py	/^def log_print(s):$/;"	f
 logger	.\Blog\www\app.py	/^    from my_log import logger$/;"	i
 logger	.\Blog\www\coroweb.py	/^    from my_log import logger$/;"	i
 logger	.\Blog\www\handlers.py	/^    from my_log import logger$/;"	i
@@ -313,11 +479,21 @@ logging	.\Blog\www\test\my_log.py	/^import logging.handlers$/;"	i
 logging	.\Blog\www\test\study_1.py	/^import logging$/;"	i
 logging	.\Blog\www\test\study_1.py	/^import logging.config$/;"	i
 logging	.\Blog\www\test\study_2.py	/^import logging$/;"	i
+logging	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^import logging$/;"	i
+logging	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^import logging$/;"	i
 loop	.\Blog\www\app.py	/^loop = asyncio.get_event_loop()$/;"	v
 main	.\Blog\www\markdown2.py	/^def main(argv=None):$/;"	f
 main	.\Blog\www\test\study_1.py	/^def main():$/;"	f
 main	.\Blog\www\test\study_2.py	/^def main():$/;"	f
+main	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^def main():$/;"	f
+manage	.\Blog\www\handlers.py	/^def manage():$/;"	f
+manage_blogs	.\Blog\www\handlers.py	/^def manage_blogs(*, page='1'):$/;"	f
+manage_comments	.\Blog\www\handlers.py	/^def manage_comments(*, page='1'):$/;"	f
+manage_create_blog	.\Blog\www\handlers.py	/^def manage_create_blog():$/;"	f
+manage_edit_blog	.\Blog\www\handlers.py	/^def manage_edit_blog(*, id):$/;"	f
+manage_users	.\Blog\www\handlers.py	/^def manage_users(*, page='1'):$/;"	f
 markdown	.\Blog\www\markdown2.py	/^def markdown(text, html4tags=False, tab_width=DEFAULT_TAB_WIDTH,$/;"	f
+markdown2	.\Blog\www\handlers.py	/^import markdown2$/;"	i
 markdown_path	.\Blog\www\markdown2.py	/^def markdown_path(path, encoding="utf-8",$/;"	f
 md5	.\Blog\www\markdown2.py	/^    from hashlib import md5$/;"	i
 md5	.\Blog\www\markdown2.py	/^    from md5 import md5$/;"	i
@@ -328,20 +504,36 @@ name	.\Blog\www\models.py	/^    name = StringField(ddl='varchar(50)')$/;"	v	clas
 next_id	.\Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 next_id	.\Blog\www\models.py	/^def next_id():$/;"	f
 norm_html_from_html	.\Blog\www\markdown2.py	/^                from test_markdown2 import norm_html_from_html$/;"	i
+on_any_event	.\Blog\www\pymonitor.py	/^    def on_any_event(self, event):$/;"	m	class:MyFileSystemEventHandler
 optparse	.\Blog\www\markdown2.py	/^import optparse$/;"	i
 orm	.\Blog\www\app.py	/^import orm$/;"	i
 os	.\Blog\www\app.py	/^import os$/;"	i
 os	.\Blog\www\coroweb.py	/^import os$/;"	i
 os	.\Blog\www\markdown2.py	/^import os$/;"	i
+os	.\Blog\www\pymonitor.py	/^import os$/;"	i
+pack_card	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    def pack_card(self):$/;"	m	class:deck_cards
 parse	.\Blog\www\coroweb.py	/^from urllib import parse$/;"	i
 parse_data	.\Blog\www\app.py	/^    async def parse_data(request):$/;"	f	function:data_factory
 passwd	.\Blog\www\models.py	/^    passwd = StringField(ddl='varchar(50)')$/;"	v	class:User
+path	.\Blog\www\pymonitor.py	/^    path = os.path.abspath('.')$/;"	v
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:AndGate
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Full_adder
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Full_adder_8_bit
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Half_adder
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NandGate
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NorGate
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NotGate
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:OrGate
+performGateLogic	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:XorGate
 pformat	.\Blog\www\markdown2.py	/^from pprint import pprint, pformat$/;"	i
+play_21_point	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^def play_21_point():$/;"	f
+play_a_turn	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^def play_a_turn():$/;"	f
 post	.\Blog\www\coroweb.py	/^def post(path):$/;"	f
 post	.\Blog\www\handlers.py	/^from coroweb import get, post$/;"	i
 postprocess	.\Blog\www\markdown2.py	/^    def postprocess(self, text):$/;"	m	class:Markdown
 pprint	.\Blog\www\markdown2.py	/^from pprint import pprint, pformat$/;"	i
 preprocess	.\Blog\www\markdown2.py	/^    def preprocess(self, text):$/;"	m	class:Markdown
+process	.\Blog\www\pymonitor.py	/^process = None$/;"	v
 py3	.\Blog\www\markdown2.py	/^    py3 = False$/;"	v
 py3	.\Blog\www\markdown2.py	/^    py3 = True$/;"	v
 pygments	.\Blog\www\markdown2.py	/^        import pygments$/;"	i
@@ -350,10 +542,13 @@ python2	.\Blog\www\markdown2.py	/^    from urllib import quote # python2$/;"	i
 python3	.\Blog\www\markdown2.py	/^    from urllib.parse import quote  # python3$/;"	i
 quote	.\Blog\www\markdown2.py	/^    from urllib import quote # python2$/;"	i
 quote	.\Blog\www\markdown2.py	/^    from urllib.parse import quote  # python3$/;"	i
+r	.\Blog\www\test\study_2.py	/^r = {'__template__': 'register.html', '__user__': None}$/;"	v
 randint	.\Blog\www\markdown2.py	/^from random import random, randint$/;"	i
 random	.\Blog\www\markdown2.py	/^from random import random, randint$/;"	i
-re	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+random	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^import random$/;"	i
+re	.\Blog\www\handlers.py	/^import re$/;"	i
 re	.\Blog\www\markdown2.py	/^import re$/;"	i
+register	.\Blog\www\handlers.py	/^def register():$/;"	f
 remove	.\Blog\www\orm.py	/^    async def remove(self):$/;"	m	class:Model
 replaces.M	.\Blog\www\static\js\awesome.js	/^        'M': function(dt) {$/;"	m
 replaces.MM	.\Blog\www\static\js\awesome.js	/^        'MM': function(dt) {$/;"	m
@@ -370,6 +565,7 @@ replaces.yy	.\Blog\www\static\js\awesome.js	/^        'yy': function(dt) {$/;"	m
 reset	.\Blog\www\markdown2.py	/^    def reset(self):$/;"	m	class:Markdown
 response	.\Blog\www\app.py	/^    async def response(request):$/;"	f	function:response_factory
 response_factory	.\Blog\www\app.py	/^async def response_factory(app, handler):$/;"	f
+restart_process	.\Blog\www\pymonitor.py	/^def restart_process():$/;"	f
 result	.\Blog\www\markdown2.py	/^    def result(*rest, **kwrest):$/;"	f	function:_curry
 return.addEventListener.addEventListener.fn.uksticky	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	f
 reversed	.\Blog\www\markdown2.py	/^    def reversed(sequence):$/;"	f
@@ -378,14 +574,30 @@ sample_function	.\Blog\www\test\study_1.py	/^def sample_function(secret_paramete
 save	.\Blog\www\orm.py	/^    async def save(self):$/;"	m	class:Model
 select	.\Blog\www\orm.py	/^async def select(sql, args, size=None):$/;"	f
 set	.\Blog\www\markdown2.py	/^    from sets import Set as set$/;"	i
+setNextPin	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:BinaryGate
+setNextPin	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:Half_adder
+setNextPin	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:UnaryGate
+setPinA	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinA(self, integer):$/;"	m	class:Full_adder
+setPinB	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinB(self, integer):$/;"	m	class:Full_adder
+setPinC_1	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinC_1(self, integer):$/;"	m	class:Full_adder
+show	.\basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def show(self):$/;"	m	class:Fraction
+signin	.\Blog\www\handlers.py	/^def signin():$/;"	f
+signout	.\Blog\www\handlers.py	/^def signout(request):$/;"	f
+start_process	.\Blog\www\pymonitor.py	/^def start_process():$/;"	f
+start_watch	.\Blog\www\pymonitor.py	/^def start_watch(path, callback):$/;"	f
+subprocess	.\Blog\www\pymonitor.py	/^import subprocess$/;"	i
 summary	.\Blog\www\models.py	/^    summary = StringField(ddl='varchar(200)')$/;"	v	class:Blog
 sys	.\Blog\www\app.py	/^import sys$/;"	i
 sys	.\Blog\www\coroweb.py	/^import sys$/;"	i
 sys	.\Blog\www\handlers.py	/^import sys$/;"	i
 sys	.\Blog\www\markdown2.py	/^import sys$/;"	i
+sys	.\Blog\www\pymonitor.py	/^import sys$/;"	i
+template	.\Blog\www\test\study_2.py	/^template = 'register.html'$/;"	v
+text2html	.\Blog\www\handlers.py	/^def text2html(text):$/;"	f
 time	.\Blog\www\app.py	/^import time$/;"	i
-time	.\Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
-time	.\Blog\www\models.py	/^import time, uuid$/;"	i
+time	.\Blog\www\handlers.py	/^import time$/;"	i
+time	.\Blog\www\models.py	/^import time$/;"	i
+time	.\Blog\www\pymonitor.py	/^import time$/;"	i
 titles	.\Blog\www\markdown2.py	/^    titles = None$/;"	v	class:Markdown
 toDict	.\Blog\www\config.py	/^def toDict(d):$/;"	f
 toc_html	.\Blog\www\markdown2.py	/^    def toc_html(self):$/;"	m	class:UnicodeWithAttrs
@@ -397,6 +609,7 @@ unicodedata	.\Blog\www\markdown2.py	/^    import unicodedata$/;"	i
 update	.\Blog\www\orm.py	/^    async def update(self):$/;"	m	class:Model
 update	.\Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
 urls	.\Blog\www\markdown2.py	/^    urls = None$/;"	v	class:Markdown
+user2cookie	.\Blog\www\handlers.py	/^def user2cookie(user, max_age):$/;"	f
 user_id	.\Blog\www\models.py	/^    user_id = StringField(ddl='varchar(50)')$/;"	v	class:Blog
 user_id	.\Blog\www\models.py	/^    user_id = StringField(ddl='varchar(50)')$/;"	v	class:Comment
 user_image	.\Blog\www\models.py	/^    user_image = StringField(ddl='varchar(500)')$/;"	v	class:Blog
@@ -406,10 +619,12 @@ user_name	.\Blog\www\models.py	/^    user_name = StringField(ddl='varchar(50)')$
 users	.\Blog\conf\schema.sql	/^create table users ($/;"	t
 users.key	.\Blog\conf\schema.sql	/^    key `idx_created_at` (`created_at`),$/;"	F
 util	.\Blog\www\markdown2.py	/^            from pygments import lexers, util$/;"	i
-uuid	.\Blog\www\models.py	/^import time, uuid$/;"	i
+uuid	.\Blog\www\models.py	/^import uuid$/;"	i
+validateEmail	.\Blog\www\templates\register.html	/^function validateEmail(email) {$/;"	f
 var.replaces.yyyy	.\Blog\www\static\js\awesome.js	/^        'yyyy': function(dt) {$/;"	m
 web	.\Blog\www\app.py	/^from aiohttp import web$/;"	i
 web	.\Blog\www\coroweb.py	/^from aiohttp import web$/;"	i
+web	.\Blog\www\handlers.py	/^from aiohttp import web$/;"	i
 window.console.debug	.\Blog\www\static\js\awesome.js	/^        debug: function () {}$/;"	m
 window.console.error	.\Blog\www\static\js\awesome.js	/^        error: function () {},$/;"	m
 window.console.info	.\Blog\www\static\js\awesome.js	/^        info: function() {},$/;"	m

@@ -8,19 +8,29 @@ APIError	Blog\www\apis.py	/^class APIError(Exception):$/;"	c
 APIPermissionError	Blog\www\apis.py	/^class APIPermissionError(APIError):$/;"	c
 APIResourceNotFoundError	Blog\www\apis.py	/^class APIResourceNotFoundError(APIError):$/;"	c
 APIValueError	Blog\www\apis.py	/^class APIValueError(APIError):$/;"	c
+Page	Blog\www\apis.py	/^class Page(object):$/;"	c
 __init__	Blog\www\apis.py	/^    def __init__(self, error, data='', message=''):$/;"	m	class:APIError
 __init__	Blog\www\apis.py	/^    def __init__(self, field, message=''):$/;"	m	class:APIResourceNotFoundError
 __init__	Blog\www\apis.py	/^    def __init__(self, field, message=''):$/;"	m	class:APIValueError
+__init__	Blog\www\apis.py	/^    def __init__(self, item_count, page_index=1, page_size=10):$/;"	m	class:Page
 __init__	Blog\www\apis.py	/^    def __init__(self, message=''):$/;"	m	class:APIPermissionError
+__repr__	Blog\www\apis.py	/^    __repr__ = __str__$/;"	v	class:Page
+__str__	Blog\www\apis.py	/^    def __str__(self):$/;"	m	class:Page	file:
+doctest	Blog\www\apis.py	/^    import doctest$/;"	i
 functools	Blog\www\apis.py	/^import functools$/;"	i
 inspect	Blog\www\apis.py	/^import inspect$/;"	i
 json	Blog\www\apis.py	/^import json$/;"	i
 logging	Blog\www\apis.py	/^import logging$/;"	i
+COOKIE_NAME	Blog\www\app.py	/^from handlers import cookie2user, COOKIE_NAME$/;"	i
 Environment	Blog\www\app.py	/^from jinja2 import Environment, FileSystemLoader$/;"	i
 FileSystemLoader	Blog\www\app.py	/^from jinja2 import Environment, FileSystemLoader$/;"	i
 add_routes	Blog\www\app.py	/^from coroweb import add_routes, add_static$/;"	i
 add_static	Blog\www\app.py	/^from coroweb import add_routes, add_static$/;"	i
 asyncio	Blog\www\app.py	/^import asyncio$/;"	i
+auth	Blog\www\app.py	/^    async def auth(request):$/;"	f	function:auth_factory
+auth_factory	Blog\www\app.py	/^async def auth_factory(app, handler):$/;"	f
+configs	Blog\www\app.py	/^from config import configs$/;"	i
+cookie2user	Blog\www\app.py	/^from handlers import cookie2user, COOKIE_NAME$/;"	i
 data_factory	Blog\www\app.py	/^async def data_factory(app, handler):$/;"	f
 datetime	Blog\www\app.py	/^from datetime import datetime$/;"	i
 datetime_filter	Blog\www\app.py	/^def datetime_filter(t):$/;"	f
@@ -78,21 +88,57 @@ sys	Blog\www\coroweb.py	/^import sys$/;"	i
 web	Blog\www\coroweb.py	/^from aiohttp import web$/;"	i
 wrapper	Blog\www\coroweb.py	/^        def wrapper(*args, **kw):$/;"	f	function:get.decorator
 wrapper	Blog\www\coroweb.py	/^        def wrapper(*args, **kw):$/;"	f	function:post.decorator
+APIError	Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
+APIResourceNotFoundError	Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
+APIValueError	Blog\www\handlers.py	/^from apis import (APIError, APIValueError, APIResourceNotFoundError,$/;"	i
 Blog	Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
+COOKIE_NAME	Blog\www\handlers.py	/^COOKIE_NAME = 'awesession'$/;"	v
 Comment	Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 User	Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
-asyncio	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
-base64	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+_COOKIE_KEY	Blog\www\handlers.py	/^_COOKIE_KEY = configs.session.secret  # 'awesome'$/;"	v
+_RE_EMAIL	Blog\www\handlers.py	/^_RE_EMAIL = re.compile($/;"	v
+_RE_SHA1	Blog\www\handlers.py	/^_RE_SHA1 = re.compile(r'^[0-9a-f]{40}$')$/;"	v
+api_blogs	Blog\www\handlers.py	/^async def api_blogs(*, page='1'):$/;"	f
+api_comments	Blog\www\handlers.py	/^async def api_comments(*, page='1'):$/;"	f
+api_create_blog	Blog\www\handlers.py	/^async def api_create_blog(request, *, name, summary, content):$/;"	f
+api_create_comment	Blog\www\handlers.py	/^async def api_create_comment(id, request, *, content):$/;"	f
+api_delete_blog	Blog\www\handlers.py	/^async def api_delete_blog(request, *, id):$/;"	f
+api_delete_comments	Blog\www\handlers.py	/^async def api_delete_comments(id, request):$/;"	f
+api_get_blog	Blog\www\handlers.py	/^async def api_get_blog(*, id):$/;"	f
+api_get_users	Blog\www\handlers.py	/^async def api_get_users(*, page='1'):$/;"	f
+api_register_user	Blog\www\handlers.py	/^async def api_register_user(*, email, name, passwd):$/;"	f
+api_update_blog	Blog\www\handlers.py	/^async def api_update_blog(id, request, *, name, summary, content):$/;"	f
+asyncio	Blog\www\handlers.py	/^import asyncio$/;"	i
+authenticate	Blog\www\handlers.py	/^async def authenticate(*, email, passwd):$/;"	f
+base64	Blog\www\handlers.py	/^import base64$/;"	i
+check_admin	Blog\www\handlers.py	/^def check_admin(request):$/;"	f
+configs	Blog\www\handlers.py	/^from config import configs$/;"	i
+cookie2user	Blog\www\handlers.py	/^async def cookie2user(cookie_str):$/;"	f
 get	Blog\www\handlers.py	/^from coroweb import get, post$/;"	i
-hashlib	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
-index	Blog\www\handlers.py	/^async def index(request):$/;"	f
-json	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+get_blog	Blog\www\handlers.py	/^async def get_blog(id):$/;"	f
+get_page_index	Blog\www\handlers.py	/^def get_page_index(page_str):$/;"	f
+hashlib	Blog\www\handlers.py	/^import hashlib$/;"	i
+index	Blog\www\handlers.py	/^async def index(*, page='1'):$/;"	f
+json	Blog\www\handlers.py	/^import json$/;"	i
 logger	Blog\www\handlers.py	/^    from my_log import logger$/;"	i
+manage	Blog\www\handlers.py	/^def manage():$/;"	f
+manage_blogs	Blog\www\handlers.py	/^def manage_blogs(*, page='1'):$/;"	f
+manage_comments	Blog\www\handlers.py	/^def manage_comments(*, page='1'):$/;"	f
+manage_create_blog	Blog\www\handlers.py	/^def manage_create_blog():$/;"	f
+manage_edit_blog	Blog\www\handlers.py	/^def manage_edit_blog(*, id):$/;"	f
+manage_users	Blog\www\handlers.py	/^def manage_users(*, page='1'):$/;"	f
+markdown2	Blog\www\handlers.py	/^import markdown2$/;"	i
 next_id	Blog\www\handlers.py	/^from models import User, Comment, Blog, next_id$/;"	i
 post	Blog\www\handlers.py	/^from coroweb import get, post$/;"	i
-re	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+re	Blog\www\handlers.py	/^import re$/;"	i
+register	Blog\www\handlers.py	/^def register():$/;"	f
+signin	Blog\www\handlers.py	/^def signin():$/;"	f
+signout	Blog\www\handlers.py	/^def signout(request):$/;"	f
 sys	Blog\www\handlers.py	/^import sys$/;"	i
-time	Blog\www\handlers.py	/^import re, time, json, hashlib, base64, asyncio$/;"	i
+text2html	Blog\www\handlers.py	/^def text2html(text):$/;"	f
+time	Blog\www\handlers.py	/^import time$/;"	i
+user2cookie	Blog\www\handlers.py	/^def user2cookie(user, max_age):$/;"	f
+web	Blog\www\handlers.py	/^from aiohttp import web$/;"	i
 DEBUG	Blog\www\markdown2.py	/^DEBUG = False$/;"	v
 DEFAULT_TAB_WIDTH	Blog\www\markdown2.py	/^DEFAULT_TAB_WIDTH = 4$/;"	v
 HtmlCodeFormatter	Blog\www\markdown2.py	/^        class HtmlCodeFormatter(pygments.formatters.HtmlFormatter):$/;"	c	function:Markdown._color_with_pygments
@@ -315,21 +361,20 @@ name	Blog\www\models.py	/^    name = StringField(ddl='varchar(50)')$/;"	v	class:
 next_id	Blog\www\models.py	/^def next_id():$/;"	f
 passwd	Blog\www\models.py	/^    passwd = StringField(ddl='varchar(50)')$/;"	v	class:User
 summary	Blog\www\models.py	/^    summary = StringField(ddl='varchar(200)')$/;"	v	class:Blog
-time	Blog\www\models.py	/^import time, uuid$/;"	i
+time	Blog\www\models.py	/^import time$/;"	i
 user_id	Blog\www\models.py	/^    user_id = StringField(ddl='varchar(50)')$/;"	v	class:Blog
 user_id	Blog\www\models.py	/^    user_id = StringField(ddl='varchar(50)')$/;"	v	class:Comment
 user_image	Blog\www\models.py	/^    user_image = StringField(ddl='varchar(500)')$/;"	v	class:Blog
 user_image	Blog\www\models.py	/^    user_image = StringField(ddl='varchar(500)')$/;"	v	class:Comment
 user_name	Blog\www\models.py	/^    user_name = StringField(ddl='varchar(50)')$/;"	v	class:Blog
 user_name	Blog\www\models.py	/^    user_name = StringField(ddl='varchar(50)')$/;"	v	class:Comment
-uuid	Blog\www\models.py	/^import time, uuid$/;"	i
+uuid	Blog\www\models.py	/^import uuid$/;"	i
 BooleanField	Blog\www\orm.py	/^class BooleanField(Field):$/;"	c
 Field	Blog\www\orm.py	/^class Field(object):$/;"	c
 FloatField	Blog\www\orm.py	/^class FloatField(Field):$/;"	c
 IntegerField	Blog\www\orm.py	/^class IntegerField(Field):$/;"	c
 Model	Blog\www\orm.py	/^class Model(dict, metaclass=ModelMetaclass):$/;"	c
 ModelMetaclass	Blog\www\orm.py	/^class ModelMetaclass(type):$/;"	c
-StandardError	Blog\www\orm.py	/^from xx import StandardError$/;"	i
 StringField	Blog\www\orm.py	/^class StringField(Field):$/;"	c
 TextField	Blog\www\orm.py	/^class TextField(Field):$/;"	c
 __getattr__	Blog\www\orm.py	/^    def __getattr__(self, key):$/;"	m	class:Model	file:
@@ -344,8 +389,8 @@ __new__	Blog\www\orm.py	/^    def __new__(cls, name, bases, attrs):$/;"	m	class:
 __setattr__	Blog\www\orm.py	/^    def __setattr__(self, key, value):$/;"	m	class:Model	file:
 __str__	Blog\www\orm.py	/^    def __str__(self):$/;"	m	class:Field	file:
 aiomysql	Blog\www\orm.py	/^import aiomysql$/;"	i
+create_args_string	Blog\www\orm.py	/^def create_args_string(num):$/;"	f
 create_pool	Blog\www\orm.py	/^async def create_pool(loop, **kw):$/;"	f
-created_args_string	Blog\www\orm.py	/^def created_args_string(num):$/;"	f
 destory_pool	Blog\www\orm.py	/^async def destory_pool():$/;"	f
 execute	Blog\www\orm.py	/^async def execute(sql, args, autocommit=True):$/;"	f
 find	Blog\www\orm.py	/^    async def find(cls, pk):$/;"	m	class:Model
@@ -359,6 +404,25 @@ remove	Blog\www\orm.py	/^    async def remove(self):$/;"	m	class:Model
 save	Blog\www\orm.py	/^    async def save(self):$/;"	m	class:Model
 select	Blog\www\orm.py	/^async def select(sql, args, size=None):$/;"	f
 update	Blog\www\orm.py	/^    async def update(self):$/;"	m	class:Model
+FileSystemEventHandler	Blog\www\pymonitor.py	/^from watchdog.events import FileSystemEventHandler$/;"	i
+MyFileSystemEventHandler	Blog\www\pymonitor.py	/^class MyFileSystemEventHandler(FileSystemEventHandler):$/;"	c
+Observer	Blog\www\pymonitor.py	/^from watchdog.observers import Observer$/;"	i
+__init__	Blog\www\pymonitor.py	/^    def __init__(self, fn):$/;"	m	class:MyFileSystemEventHandler
+argv	Blog\www\pymonitor.py	/^    argv = sys.argv[1:]$/;"	v
+command	Blog\www\pymonitor.py	/^    command = argv$/;"	v
+command	Blog\www\pymonitor.py	/^command = ['echo', 'ok']$/;"	v
+kill_process	Blog\www\pymonitor.py	/^def kill_process():$/;"	f
+log_print	Blog\www\pymonitor.py	/^def log_print(s):$/;"	f
+on_any_event	Blog\www\pymonitor.py	/^    def on_any_event(self, event):$/;"	m	class:MyFileSystemEventHandler
+os	Blog\www\pymonitor.py	/^import os$/;"	i
+path	Blog\www\pymonitor.py	/^    path = os.path.abspath('.')$/;"	v
+process	Blog\www\pymonitor.py	/^process = None$/;"	v
+restart_process	Blog\www\pymonitor.py	/^def restart_process():$/;"	f
+start_process	Blog\www\pymonitor.py	/^def start_process():$/;"	f
+start_watch	Blog\www\pymonitor.py	/^def start_watch(path, callback):$/;"	f
+subprocess	Blog\www\pymonitor.py	/^import subprocess$/;"	i
+sys	Blog\www\pymonitor.py	/^import sys$/;"	i
+time	Blog\www\pymonitor.py	/^import time$/;"	i
 Number	Blog\www\static\js\awesome.js	/^    Number.prototype.toDateTime = function(format) {$/;"	c
 Number.toDateTime	Blog\www\static\js\awesome.js	/^    Number.prototype.toDateTime = function(format) {$/;"	m
 String	Blog\www\static\js\awesome.js	/^    String.prototype.trim = function() {$/;"	c
@@ -393,6 +457,11 @@ init	Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&
 return.addEventListener.addEventListener.fn.uksticky	Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	f
 top	Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
 update	Blog\www\static\js\sticky.min.js	/^!function(a){"function"==typeof define&&define.amd&&define("uikit-sticky",["uikit"],function(){return jQuery.fn.uksticky||a(window,window.jQuery,window.jQuery.UIkit)}),window&&window.jQuery&&window.jQuery.UIkit&&a(window,window.jQuery,window.jQuery.UIkit)}(function(a,b,c){var d={top:0,bottom:0,clsactive:"uk-active",clswrapper:"uk-sticky",getWidthFrom:""},e=b(window),f=b(document),g=[],h=e.height(),i=function(){for(var a=e.scrollTop(),c=f.height(),d=c-h,i=a>d?d-a:0,j=0;j<g.length;j++)if(g[j].stickyElement.is(":visible")){var k=g[j],l=k.stickyWrapper.offset().top,m=l-k.top-i;if(m>=a)null!==k.currentTop&&(k.stickyElement.css({position:"",top:"",width:""}).parent().removeClass(k.clsactive),k.currentTop=null);else{var n=c-k.stickyElement.outerHeight()-k.top-k.bottom-a-i;n=0>n?n+k.top:k.top,k.currentTop!=n&&(k.stickyElement.css({position:"fixed",top:n,width:k.stickyElement.width()}),"undefined"!=typeof k.getWidthFrom&&k.stickyElement.css("width",b(k.getWidthFrom).width()),k.stickyElement.parent().addClass(k.clsactive),k.currentTop=n)}}},j=function(){h=e.height()},k={init:function(a){var c=b.extend({},d,a);return this.each(function(){var a=b(this);if(!a.data("sticky")){var d=a.attr("id")||"s"+Math.ceil(1e4*Math.random()),e=b("<div><\/div>").attr("id","sticky-"+d).addClass(c.clswrapper);a.wrapAll(e),"right"==a.css("float")&&a.css({"float":"none"}).parent().css({"float":"right"}),a.data("sticky",!0);var f=a.parent();f.css("height",a.outerHeight()),g.push({top:c.top,bottom:c.bottom,stickyElement:a,currentTop:null,stickyWrapper:f,clsactive:c.clsactive,getWidthFrom:c.getWidthFrom})}})},update:i};return window.addEventListener("scroll",i,!1),window.addEventListener("resize",j,!1),b.fn.uksticky=function(a){return k[a]?k[a].apply(this,Array.prototype.slice.call(arguments,1)):"object"!=typeof a&&a?void b.error("Method "+a+" does not exist on jQuery.sticky"):k.init.apply(this,arguments)},b(document).on("uk-domready",function(){setTimeout(function(){i(),b("[data-uk-sticky]").each(function(){var a=b(this);a.data("sticky")||a.uksticky(c.Utils.options(a.attr("data-uk-sticky")))})},0)}),b.fn.uksticky});/;"	p
+initVM	Blog\www\templates\manage_blog_edit.html	/^function initVM(blog) {$/;"	f
+initVM	Blog\www\templates\manage_blogs.html	/^function initVM(data) {$/;"	f
+initVM	Blog\www\templates\manage_comments.html	/^function initVM(data) {$/;"	f
+initVM	Blog\www\templates\manage_users.html	/^function initVM(data) {$/;"	f
+validateEmail	Blog\www\templates\register.html	/^function validateEmail(email) {$/;"	f
 config	Blog\www\test\my_log.py	/^import logging.config$/;"	i
 handlers	Blog\www\test\my_log.py	/^import logging.handlers$/;"	i
 init_logging	Blog\www\test\my_log.py	/^def init_logging(log_file_name):$/;"	f
@@ -409,7 +478,153 @@ main	Blog\www\test\study_1.py	/^def main():$/;"	f
 sample_function	Blog\www\test\study_1.py	/^def sample_function(secret_parameter):$/;"	f
 logging	Blog\www\test\study_2.py	/^import logging$/;"	i
 main	Blog\www\test\study_2.py	/^def main():$/;"	f
-StandardError	Blog\www\xx.py	/^class StandardError(Exception):$/;"	c
+r	Blog\www\test\study_2.py	/^r = {'__template__': 'register.html', '__user__': None}$/;"	v
+template	Blog\www\test\study_2.py	/^template = 'register.html'$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+FILE_FILTER_PATTERN	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FILE_FILTER_PATTERN=""$/;"	v
+FILE_SUFFIXS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FILE_SUFFIXS=$/;"	v
+FOLDER_FILTER_PATTERN	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set FOLDER_FILTER_PATTERN=".*\\\\\\\\__pycache__\\\\\\\\.*"$/;"	v
+GAWK_SUFFIX	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set GAWK_SUFFIX=exc$/;"	v
+ID_TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set ID_TARGET="%DEST%\\idutils-files"$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TARGET=%DEST%\\files$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TMP=%DEST%\\_files_gawk$/;"	v
+TMP2	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TMP2=%DEST%\\_files$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-filelist.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+EXCLUDE_FOLDERS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set EXCLUDE_FOLDERS=$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TARGET=%DEST%\\ID$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TMP=%DEST%\\_ID$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-idutils.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TARGET=%DEST%\\inherits$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TMP=%DEST%\\_inherits$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-inherits.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TARGET=%DEST%\\symbols$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TMP=%DEST%\\_symbols$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-symbols.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+CTAGS_CMD	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set CTAGS_CMD=ctags$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+OPTIONS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set OPTIONS=--fields=+iaS --extra=+q$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TARGET=%DEST%\\tags$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TMP=%DEST%\\_tags$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\.exvim.algo_data\update-tags.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+FILE_FILTER_PATTERN	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FILE_FILTER_PATTERN=""$/;"	v
+FILE_SUFFIXS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FILE_SUFFIXS=$/;"	v
+FOLDER_FILTER_PATTERN	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set FOLDER_FILTER_PATTERN=".*\\\\\\\\__pycache__\\\\\\\\.*"$/;"	v
+GAWK_SUFFIX	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set GAWK_SUFFIX=exc$/;"	v
+ID_TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set ID_TARGET="%DEST%\\idutils-files"$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TARGET=%DEST%\\files$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TMP=%DEST%\\_files_gawk$/;"	v
+TMP2	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TMP2=%DEST%\\_files$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-filelist.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+EXCLUDE_FOLDERS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set EXCLUDE_FOLDERS=__pycache__ $/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TARGET=%DEST%\\ID$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TMP=%DEST%\\_ID$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-idutils.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TARGET=%DEST%\\inherits$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TMP=%DEST%\\_inherits$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-inherits.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TARGET=%DEST%\\symbols$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TMP=%DEST%\\_symbols$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-symbols.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+CTAGS_CMD	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set CTAGS_CMD=ctags$/;"	v
+DEST	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set DEST=.\\.exvim.algo_data$/;"	v
+OPTIONS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set OPTIONS=--fields=+iaS --extra=+q$/;"	v
+TARGET	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TARGET=%DEST%\\tags$/;"	v
+TMP	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TMP=%DEST%\\_tags$/;"	v
+TOOLS	basic_kownledge\Algorithms_Data_Structures\chap_1\.exvim.algo_data\update-tags.bat	/^set TOOLS=D:\\Program\\exVim\\vimfiles\\tools\\$/;"	v
+AndGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class AndGate(BinaryGate):$/;"	c
+BinaryGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class BinaryGate(LogicGate):$/;"	c
+Circuit	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Circuit(LogicGate):$/;"	c
+Connector	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Connector:$/;"	c
+Fraction	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Fraction():$/;"	c
+Full_adder	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Full_adder(Circuit):$/;"	c
+Full_adder_8_bit	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Full_adder_8_bit(Full_adder):$/;"	c
+Half_adder	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class Half_adder(Circuit):$/;"	c
+LogicGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class LogicGate():$/;"	c
+NandGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NandGate(BinaryGate):$/;"	c
+NorGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NorGate(BinaryGate):$/;"	c
+NotGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class NotGate(UnaryGate):$/;"	c
+OrGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class OrGate(BinaryGate):$/;"	c
+UnaryGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class UnaryGate(LogicGate):$/;"	c
+XorGate	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^class XorGate(BinaryGate):$/;"	c
+__add__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __add__(self, otherfraction):$/;"	m	class:Fraction	file:
+__eq__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __eq__(self, other):$/;"	m	class:Fraction	file:
+__ge__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __ge__(self, other):$/;"	m	class:Fraction	file:
+__gt__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __gt__(self, other):$/;"	m	class:Fraction	file:
+__iadd__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __iadd__(self, otherfraction):$/;"	m	class:Fraction	file:
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, fgate, tgate):$/;"	m	class:Connector
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:AndGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:BinaryGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Circuit
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Full_adder
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Full_adder_8_bit
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:Half_adder
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:LogicGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NandGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NorGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:NotGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:OrGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:UnaryGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, n):$/;"	m	class:XorGate
+__init__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __init__(self, top, bottom):$/;"	m	class:Fraction
+__le__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __le__(self, other):$/;"	m	class:Fraction	file:
+__lt__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __lt__(self, other):$/;"	m	class:Fraction	file:
+__mul__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __mul__(self, otherfraction):$/;"	m	class:Fraction	file:
+__radd__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __radd__(self, otherfraction):$/;"	m	class:Fraction	file:
+__repr__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    __repr__ = __str__$/;"	v	class:Fraction
+__str__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __str__(self):$/;"	m	class:Fraction	file:
+__sub__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __sub__(self, otherfraction):$/;"	m	class:Fraction	file:
+__truediv__	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def __truediv__(self, otherfraction):$/;"	m	class:Fraction	file:
+gcd	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^def gcd(m, n):$/;"	f
+getDen	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getDen(self):$/;"	m	class:Fraction
+getFrom	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getFrom(self):$/;"	m	class:Connector
+getName	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getName(self):$/;"	m	class:LogicGate
+getNum	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getNum(self):$/;"	m	class:Fraction
+getOutput	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getOutput(self):$/;"	m	class:LogicGate
+getPin	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPin(self):$/;"	m	class:UnaryGate
+getPinA	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:BinaryGate
+getPinA	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Full_adder
+getPinA	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Full_adder_8_bit
+getPinA	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinA(self):$/;"	m	class:Half_adder
+getPinB	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:BinaryGate
+getPinB	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Full_adder
+getPinB	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Full_adder_8_bit
+getPinB	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinB(self):$/;"	m	class:Half_adder
+getPinC_1	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getPinC_1(self):$/;"	m	class:Full_adder
+getTo	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def getTo(self):$/;"	m	class:Connector
+logging	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^import logging$/;"	i
+main	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^def main():$/;"	f
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:AndGate
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Full_adder
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Full_adder_8_bit
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:Half_adder
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NandGate
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NorGate
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:NotGate
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:OrGate
+performGateLogic	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def performGateLogic(self):$/;"	m	class:XorGate
+setNextPin	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:BinaryGate
+setNextPin	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:Half_adder
+setNextPin	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setNextPin(self, source):$/;"	m	class:UnaryGate
+setPinA	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinA(self, integer):$/;"	m	class:Full_adder
+setPinB	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinB(self, integer):$/;"	m	class:Full_adder
+setPinC_1	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def setPinC_1(self, integer):$/;"	m	class:Full_adder
+show	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17.py	/^    def show(self):$/;"	m	class:Fraction
+card	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^class card():$/;"	c
+deck_cards	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^class deck_cards():$/;"	c
+deck_dict	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    deck_dict = {$/;"	v	class:deck_cards
+doctest	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    import doctest$/;"	i
+logging	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^import logging$/;"	i
+pack_card	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^    def pack_card(self):$/;"	m	class:deck_cards
+play_21_point	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^def play_21_point():$/;"	f
+play_a_turn	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^def play_a_turn():$/;"	f
+random	basic_kownledge\Algorithms_Data_Structures\chap_1\ex_1_17_02.py	/^import random$/;"	i
 fpath	basic_kownledge\IO_coding\prac.py	/^fpath = r'test.txt'$/;"	v
 s	basic_kownledge\IO_coding\prac.py	/^    s = f.read()$/;"	v
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
