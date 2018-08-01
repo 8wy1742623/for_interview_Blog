@@ -5,4 +5,7 @@
 ### Part II
     Some basic kownledge.
 
-last change: 2018-07-21 17:51
+注明：
+    git_push.py 用于执行git上传操作。
+    push 就是比较慢（五分钟？），耐心等待下。
+    不然，用Ctrl+c中断进程，重新执行它。
